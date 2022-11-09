@@ -1,0 +1,51 @@
+
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <style>
+            li {
+                background-color: #f2aaaa;
+                padding: 1%;
+            }
+            
+            li:hover {
+                background-color: #f7f5dd;
+                box-shadow: 1px 1px 1px 1px grey;
+            }
+            #c-name,#c-dob,#c-country,#c-file 
+            {
+                font-family: sans-serif;
+                font-weight: bolder;
+                font-size: 1.3rem;
+                color: #111d5e;
+            }
+            
+        </style>
+    </head>
+    <body>
+
+        <h1 style="text-align:center;">Records</h1>
+
+        <ul id="list" style="list-style: none;">
+            <% for(let i of records) { %>
+                <li class="record">
+                    <div class="details" style="display: inline;">
+                        <div id="c-name">NAME:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= i.name %></div>&NonBreakingSpace;
+                        <div id="c-name">DOB:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= i.dob %></div>&NonBreakingSpace;
+                        <div id="c-name">COUNTRY:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= i.country %></div>&NonBreakingSpace;
+                            <a href="/delete-contact/?id=<%= i._id %>" >
+                                <i class="fa fa-trash" style="color:red;"></i>
+                            </a> 
+                        </span>
+                    </div> 
+                </li>
+                <hr>
+            <% } %>
+        </ul>
+
+    </body>
+</html>
