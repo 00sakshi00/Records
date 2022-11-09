@@ -1,6 +1,6 @@
 # Records
 
-Contact list web app backed by node.js, express.js and mongoDB
+Basic Records web app backed by node.js, express.js and mongoDB
 
 Steps to run:
 * Download the code
